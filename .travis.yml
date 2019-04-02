@@ -1,11 +1,8 @@
 language: python
-sudo: false
 python:
   - 3.6
-addons:
-  apt:
-    packages:
-      - sqlite3
+before_install:
+  - sudo apt-get install -y sqlite3
 install:
   - pip install -r requirements.txt
 script:
